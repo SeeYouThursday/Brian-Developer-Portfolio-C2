@@ -1,0 +1,23 @@
+body {
+  background-color: rgba(2, 205, 93, 0.428);
+}
+
+main,
+header,
+footer {
+  background-color: whitesmoke;
+  padding: 5px;
+  border: 9px;
+}
+
+/* About Me Section */
+#aboutMe {
+  display: flex;
+  overflow: wrap;
+}
+
+/* Basic Landing Pages */
+
+/* Vanilla JS Projects */
+
+/* React Projects */
