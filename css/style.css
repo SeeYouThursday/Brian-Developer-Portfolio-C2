@@ -1,5 +1,9 @@
-body {
+/* option 1 body {
   background-color: rgba(2, 205, 93, 0.428);
+} */
+
+body {
+  background-color: rgba(0, 61, 28, 0.428);
 }
 
 main,
@@ -10,13 +14,55 @@ footer {
   border: 9px;
 }
 
+/* header */
+h1 {
+  display: block;
+  padding: 30px;
+  border: 5px solid black;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+nav {
+  display: inline-flexbox;
+  padding: 5px;
+  background-color: blue;
+  text-align: right;
+  font-size: 30px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: inline;
+}
+
+nav ul li,
+a {
+  display: inline;
+  padding: 5px solid blue;
+  background-color: blue;
+  color: yellow;
+}
+
+/* a::before:hover {
+  display: contents;
+}
+
+a:after:hover {
+  content: "Hey! Listen!";
+} */
+
 /* About Me Section */
 #aboutMe {
   display: flex;
-  overflow: wrap;
+  flex-wrap: wrap;
 }
 
 /* Basic Landing Pages */
+#landing-pages {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 /* Vanilla JS Projects */
 
