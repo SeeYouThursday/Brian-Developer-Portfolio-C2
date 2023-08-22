@@ -1,33 +1,57 @@
 /* option 1 body {
   background-color: rgba(2, 205, 93, 0.428);
 } */
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: rgba(0, 61, 28, 0.428);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-main,
-header,
-footer {
+main {
   background-color: whitesmoke;
   padding: 20px;
-  border: 9px;
-}
-
-/* header */
-h1 {
-  display: block;
-  padding: 30px;
-  border: 5px solid black;
-  border-radius: 20px;
   margin: 10px;
 }
 
-nav {
+/* header */
+header {
   display: flex;
+  margin: 2px;
+  border: 20px gainsboro;
+  border-radius: 4%;
+  box-shadow: 20px;
+}
+
+h1 {
+  font-style: oblique;
+  display: flex;
+  justify-content: center;
+  width: 95;
+  margin: 20px;
+  padding: 30px;
+  border: 5px solid black;
+  border-radius: 20px;
+  background-color: gray;
+  margin: 10px;
+  rotate: 1deg;
+  border-style: outset;
+}
+
+#rotate:hover {
+  rotate: 360%;
+  transition-property: 360deg;
+}
+
+nav {
+  display: inline;
   line-height: 30px;
   width: 100%;
   padding: 20px;
+  border-radius: 20px 2px;
+
   /* border: 3px black; */
   background-color: rgb(1, 1, 78);
   text-align: right;
@@ -36,17 +60,22 @@ nav {
 
 nav ul {
   list-style-type: none;
-  display: inline;
+  display: inline-flex;
+  justify-content: space-evenly;
 }
 
 nav ul li {
+  display: flex-inline;
   padding: 10px blue;
   border: border;
-  display: inline-flex;
+  display: flex;
 }
 
 nav ul li,
 a {
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
   padding: 10px solid blue;
   color: yellow;
   text-decoration: none;
