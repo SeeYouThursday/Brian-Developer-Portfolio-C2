@@ -11,29 +11,34 @@
   }
   to {
     transform: translateX(300%);
-
-    display: none;
   }
 }
 /* to {
     transform: rotate(90);
   } */
 
-@keyframes noDisplay {
+@keyframes slideOut {
+  from {
+    tranform: translateX(100%);
+  }
+
+  to {
+    transform: translate(-100%);
+  }
 }
 .naruto img {
-  animation: slidein 1s linear 2s 1 reverse forwards;
+  animation: slidein 4s linear 2s 2s reverse both;
   animation-delay: 1s;
   border-radius: 10%;
   border: 5px solid red;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-in-out;
   /* end animation */
-  transition: ;
 }
 
-.naruto:-ms-ticks-after {
-  display: none;
+.naruto img:after:cue {
+  visibility: hidden;
 }
+
 body {
   background-color: rgba(0, 61, 28, 0.428);
 }
