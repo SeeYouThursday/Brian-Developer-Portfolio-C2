@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+/* color pallete link: https://coolors.co/3e78b2-004ba8-4a525a-24272b-07070a */
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-image: url(../assets/images/backgroundbody.png);
+}
+
+/* header styling */
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  background-color: #004ba8;
+}
+
+/* nav styling */
+
+nav ul {
+  list-style-type: none;
+  box-shadow: #bcc4bb 5px;
+  background-color: #bcc4bb;
+  position: relative;
+  top: 30px;
+  right: 530px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+nav li a {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 10px;
+}
+
+nav ul li:hover {
+  background-color: #8c82d9;
+}
+
+/* Generic Section Headings Styling */
+
+.sectionLabels {
+  display: inline-block;
+  /* justify-content: flex-start;
+  align-items: flex-start; */
+  position: relative;
+  top: 50px;
+  rotate: -90deg;
+}
+
+/* About Me Section Styling */
+#aboutMe {
+  position: relative;
+  left: 100px;
+  width: 70%;
+}
+
+/* selfie */
+#itsBrian {
+  display: block;
+  height: 10%;
+  width: 10%;
+  border: 5px solid #3e78b2;
+  position: relative;
+}
+
+/* First Image - larger than other app imgs */
+/* #firstImage {
+} */
+
+/* Remaining Project Images Below */
