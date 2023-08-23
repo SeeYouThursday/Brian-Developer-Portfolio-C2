@@ -12,20 +12,20 @@ body {
 }
 
 main {
-  background-color: whitesmoke;
+  /* background-color: #2e3047; */
   padding: 20px;
-  margin: 10px;
 }
 
 /* header */
 /* on click, header comes into focus with focus-within */
 header {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   margin: 2px;
   border: 20px gainsboro;
   border-radius: 20%;
   box-shadow: 20px;
-  position: relative 20px;
 }
 
 h1 {
@@ -42,54 +42,63 @@ h1 {
   opacity: 0.5;
 }
 
-nav {
-  display: inline;
+.navBorder {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   line-height: 30px;
-  width: 100%;
+  width: 200px;
   padding: 20px;
   border-radius: 20px;
   /* border: 3px black; */
   background-color: rgb(1, 1, 78);
   text-align: right;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 nav ul {
   list-style-type: none;
   justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /* box-shadow: 30px -15px rgba(38, 128, 0, 0.389); */
+  width: 50%;
+  border-radius: 30px;
 }
 
 nav ul li {
   padding: 20px blue;
-  border: border;
+  border: 20px white;
   display: flex;
-  box-shadow: 10px 5px 5px gray;
+  min-width: 30%;
 }
 
-nav ul li,
+/* nav items  */
 a {
   text-align: center;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px solid blue;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1px;
+  background-color: #181b4d;
   color: yellow;
   text-decoration: none;
-  border: 5px yellow;
+  border: 15px yellow;
 }
 
-/* attempt at animation for NAV */
-/* a::before:hover {
-  display: contents;
+/* List Items Content */
+.projectList {
+  width: 50%;
+  padding: 10px;
 }
-
-a:after:hover {
-  content: "Hey! Listen!";
-} */
 
 /* About Me Section */
 #aboutMe {
   display: flex;
   flex-wrap: wrap;
+  background-color: blueviolet;
 }
 
 /* Basic Landing Pages */
@@ -101,6 +110,13 @@ a:after:hover {
 /* Vanilla JS Projects */
 
 /* React Projects */
+
+/* End Basic Styling */
+@media screen and (max-width: 992px) {
+  .projectList {
+    min-width: 75%;
+  }
+}
 
 /* Animations
 
