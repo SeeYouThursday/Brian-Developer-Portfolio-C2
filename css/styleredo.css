@@ -32,17 +32,10 @@ header {
 
 h1 {
   flex: 1 0 200px;
-  /* border-bottom: 10px solid var(--light); */
   color: yellow;
   padding: 10px;
   position: relative;
   margin: 15px;
-  /* create a visual expanding of the header */
-}
-
-h1 {
-  transition: ease-in;
-  transition-duration: 2s;
 }
 
 /* nav styling */
@@ -60,34 +53,35 @@ h1 {
 
 /* adjust width affects whole box for link here */
 .nav li {
-  /* align-items: flex-end; */
   flex: 1 1 200px;
   background-color: var(--light);
   padding: 10px;
   margin-left: 10px;
   margin-right: 10px;
   width: 100%;
+  position: relative;
 }
 
 nav li a {
   flex: 1 1 400px;
   text-align: center;
   text-decoration: none;
+  color: yellow;
   /* width does nothing of value here currently */
 }
 
+/* Interact with Nav */
 .nav li:hover {
-  background-color: #d64045;
-  box-shadow: inset 5px 5px 5px rebeccapurple;
-  color: yellow;
+  background-color: rgb(139, 189, 139);
+  box-shadow: inset 5px 5px 5px blue;
 }
 
 .nav a:hover {
-  color: lime;
+  color: yellow;
 }
 
 a:visited {
-  color: #a0c1d1;
+  color: initial;
 }
 /* Generic Section Headings Styling */
 
@@ -115,12 +109,11 @@ article {
   border: 5px var(--light);
 }
 
-p {
+/* revisit text color */
+article p {
   flex: 1 1 100px;
+  color: var(--light);
 }
-/* #aboutme {
-  
-} */
 
 /* selfie */
 #itsBrian {
@@ -132,27 +125,33 @@ p {
 
 /* First Project Image - larger than other app imgs */
 #firstProject {
-  flex: auto;
-  width: 600px;
-  height: 600px;
+  flex: 1 0 400px;
+  /* order: 1; */
+  min-height: 200px;
+  min-width: 200px;
   padding: 10px;
   border: 5px solid var(--heading-color);
   border-radius: 5px;
   margin-bottom: 10px;
-  margin: 10px;
+  margin-left: 20px;
 }
 
 /* Remaining Project Images Below */
 
-.smallerCards {
-  display: flex;
+.cards {
+  display: inline-flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  /* align-items: */
-  width: 50%;
+  /* align-items: center; */
+  width: 90%;
 }
 
-.positionProjects {
+#firstProject {
+  display: block;
+  width: 90%;
+  margin-right: 40px;
+}
+.smallerProjects {
   flex: 1 1 200px;
   border: 5px solid var(--heading-color);
   width: 50%;
@@ -160,13 +159,37 @@ p {
   margin: 10px;
 }
 
+a[href*="#placeholder"] {
+  background-color: aliceblue;
+  backdrop-filter: focus(10px);
+  padding: 10px;
+  position: relative;
+  right: 14px;
+  border: 5px var(--dark);
+  border-style: groove;
+}
+
+/* a[href*="#placeholder"]:hover::before {
+  content: "You're doing a great job";
+  width: 120px;
+  padding: 10px;
+  font-size: small;
+  position: absolute;
+} */
+
 /* Inside Project Boxes */
-.positionProjects:hover {
-  box-shadow: inset 5px 5px 5px blueviolet;
+.positionProjects #firstProject:hover {
+  box-shadow: inset 5px 5px 5px gold;
 }
 
 /* footer - Contact Me */
-footer h3 {
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact {
+  flex: 1 1 0;
   border: 5px solid white;
   width: 90%;
   height: 40px;
@@ -177,6 +200,10 @@ footer h3 {
   box-shadow: 5px 10px 10px var(--light);
 }
 
+.contact-content {
+  list-style-type: none;
+}
+
 /* End Basic Styling - Begin Responsive Design */
 
 @media screen and (max-width: 992px) {
@@ -184,11 +211,6 @@ footer h3 {
     flex-direction: column;
     justify-content: center;
   }
-
-  /* h1 {
-    position: relative;
-    right: 10%;
-  } */
 
   nav ul {
     flex-direction: column;
@@ -199,6 +221,13 @@ footer h3 {
     min-height: 25;
   }
 }
+/* #firstProject {
+    width: 100%;
+  } */
+
+/* .cards {
+    flex-direction: column;
+  } */
 /* @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
