@@ -129,11 +129,9 @@ article p {
   /* order: 1; */
   min-height: 200px;
   min-width: 200px;
-  padding: 10px;
   border: 5px solid var(--heading-color);
   border-radius: 5px;
   margin-bottom: 10px;
-  margin-left: 20px;
 }
 
 /* Remaining Project Images Below */
@@ -146,21 +144,24 @@ article p {
   width: 90%;
 }
 
-#firstProject {
-  display: block;
-  width: 90%;
-  margin-right: 40px;
-}
-.smallerProjects {
+/* .smallerProjects {
   flex: 1 1 200px;
   border: 5px solid var(--heading-color);
   width: 50%;
   padding: 10px;
   margin: 10px;
+} */
+
+.smallerProjects img {
+  flex: 1 1 200px;
+  border: 5px solid var(--heading-color);
+  width: 25%;
+  margin: 10px;
+  position: relative;
 }
 
 a[href*="#placeholder"] {
-  background-color: aliceblue;
+  background-color: gold;
   backdrop-filter: focus(10px);
   padding: 10px;
   position: relative;
@@ -169,16 +170,12 @@ a[href*="#placeholder"] {
   border-style: groove;
 }
 
-/* a[href*="#placeholder"]:hover::before {
-  content: "You're doing a great job";
-  width: 120px;
-  padding: 10px;
-  font-size: small;
-  position: absolute;
-} */
-
 /* Inside Project Boxes */
-.positionProjects #firstProject:hover {
+.smallerProjects:hover h3 {
+  box-shadow: inset 5px 5px 5px gold;
+}
+
+#firstProject:hover {
   box-shadow: inset 5px 5px 5px gold;
 }
 
@@ -195,7 +192,6 @@ footer {
   height: 40px;
   margin: 18px;
   color: yellow;
-  /* transform: skew(3deg); */
   background-color: var(--heading-color);
   box-shadow: 5px 10px 10px var(--light);
 }
