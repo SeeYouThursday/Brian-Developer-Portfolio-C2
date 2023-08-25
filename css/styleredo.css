@@ -1,3 +1,9 @@
+:root {
+  --light: #a0c1d1;
+  --heading-color: #232c33;
+  --dark: #5a7d7c;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +12,7 @@
 
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: var(--light);
   /* background-image: url(../assets/images/backgroundbody.png); */
 }
 
@@ -15,56 +22,47 @@ header {
   /* set the flex-direction to row until browser gets smaller than 768px in media query at the bottom */
   display: flex;
   flex-direction: row;
-  align-items: center;
-  box-shadow: 5px 10px 10px #bcc4bb;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  box-shadow: 5px 10px 10px var(--light);
   margin: 20px;
   width: 90%;
-  background-color: #3e78b2;
+  background-color: var(--heading-color);
 }
 
-header h1 {
-  flex: 1 1 20px;
-  border-bottom: 50px solid #bcc4bb;
+h1 {
+  flex: 1 0 200px;
+  /* border-bottom: 10px solid var(--light); */
   color: yellow;
   padding: 10px;
+  position: relative;
+  margin: 15px;
+  /* create a visual expanding of the header */
+}
+
+h1 {
+  transition: ease-in;
+  transition-duration: 2s;
 }
 
 /* nav styling */
-
-/* nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: safe;
-} */
-
-/* Hey! You're going places! */
-nav h2 {
-  text-orientation: sideways-right;
-  background-color: antiquewhite;
-  border: 5px solid;
-  border-radius: 10px;
-  width: 50%;
-}
-
 /* adjust width here to affect the background of the navbar */
-nav ul {
+.nav {
   /* two below make the nav contents into a row */
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   list-style-type: none;
-  width: 100%;
   font-size: 20px;
-  font-weight: 900;
+  text-align: center;
+  margin-right: 30px;
 }
 
 /* adjust width affects whole box for link here */
-nav ul li {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: safe;
+.nav li {
   /* align-items: flex-end; */
-  background-color: #bcc4bb;
+  flex: 1 1 200px;
+  background-color: var(--light);
   padding: 10px;
   margin-left: 10px;
   margin-right: 10px;
@@ -78,10 +76,19 @@ nav li a {
   /* width does nothing of value here currently */
 }
 
-nav ul li:hover {
-  background-color: #8c82d9;
+.nav li:hover {
+  background-color: #d64045;
+  box-shadow: inset 5px 5px 5px rebeccapurple;
+  color: yellow;
 }
 
+.nav a:hover {
+  color: lime;
+}
+
+a:visited {
+  color: #a0c1d1;
+}
 /* Generic Section Headings Styling */
 
 .sectionLabels {
@@ -91,29 +98,29 @@ nav ul li:hover {
   margin: 18px;
   color: yellow;
   transform: skew(-9deg);
-  background-color: #3e78b2;
-  box-shadow: 5px 10px 10px #bcc4bb;
+  background-color: var(--heading-color);
+  box-shadow: 5px 10px 10px var(--light);
 }
 
 /* About Me Section Styling */
-aside {
+
+article {
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
+  background-color: var(--heading-color);
+  padding: 10px;
+  /* height: fit-content; */
+  filter: drop-shadow(4px 4px 5px gray);
+  border: 5px var(--light);
 }
 
 p {
-  flex: 1 1 0;
-  background-color: #3e78b2;
-  padding: 10px;
-  height: fit-content;
-  filter: drop-shadow(4px 4px 5px gray);
+  flex: 1 1 100px;
 }
-
-#aboutme {
-  display: flex;
-  justify-content: center;
-}
+/* #aboutme {
+  
+} */
 
 /* selfie */
 #itsBrian {
@@ -121,33 +128,78 @@ p {
   min-width: 25%;
   width: 25%;
   height: 25%;
-
-  order: 2;
 }
 
-/* First Image - larger than other app imgs */
+/* First Project Image - larger than other app imgs */
 #firstProject {
-  width: 100%;
-  height: 100%;
-  border: 5px solid #3e78b2;
+  flex: auto;
+  width: 600px;
+  height: 600px;
+  padding: 10px;
+  border: 5px solid var(--heading-color);
   border-radius: 5px;
   margin-bottom: 10px;
+  margin: 10px;
 }
 
 /* Remaining Project Images Below */
 
-.leftProjects .rightProjects {
+.smallerCards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* align-items: */
   width: 50%;
-  border: 5px solid #3e78b2;
-  border-radius: 5px;
-  margin-bottom: 20px;
+}
+
+.positionProjects {
+  flex: 1 1 200px;
+  border: 5px solid var(--heading-color);
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Inside Project Boxes */
+.positionProjects:hover {
+  box-shadow: inset 5px 5px 5px blueviolet;
+}
+
+/* footer - Contact Me */
+footer h3 {
+  border: 5px solid white;
+  width: 90%;
+  height: 40px;
+  margin: 18px;
+  color: yellow;
+  /* transform: skew(3deg); */
+  background-color: var(--heading-color);
+  box-shadow: 5px 10px 10px var(--light);
 }
 
 /* End Basic Styling - Begin Responsive Design */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* h1 {
+    position: relative;
+    right: 10%;
+  } */
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  #itsBrian {
+    min-width: 25%;
+    min-height: 25;
+  }
+}
+/* @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
     min-width: 400px;
@@ -165,11 +217,7 @@ p {
     min-width: 25%;
     min-height: 25;
   }
-}
-
-/* aside img {
-    display: none;
-  } */
+} */
 
 @media screen and (max-width: 480px) {
   header {
@@ -179,5 +227,15 @@ p {
 
   nav ul {
     flex-direction: column;
+  }
+
+  #itsBrian {
+    position: relative;
+    left: 10%;
+  }
+
+  article {
+    position: relative;
+    left: 5%;
   }
 }
