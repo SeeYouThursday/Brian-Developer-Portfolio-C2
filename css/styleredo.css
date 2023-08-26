@@ -114,9 +114,6 @@ a:visited {
   align-items: center;
 }
 
-/* article {
-  /* display: flex; }*/
-
 article p {
   flex-basis: 40%;
   margin: 10px;
@@ -133,15 +130,15 @@ article p {
   max-width: 20%;
 }
 
-/* First Project Image - larger than other app imgs */
-a img {
-  flex: 1 0 auto;
-  /* height: 100%;
-  width: 100%; */
+/* Revisit - First Project Image - larger than other app imgs */
+/* a img {
+  /* flex: 1 0 auto; */
+/* height: 100%;
+  width: 100%; 
   border: 5px solid var(--heading-color);
   border-radius: 5px;
   margin-bottom: 10px;
-}
+}*/
 
 /* making a inset shadow effect w/o s.e. */
 img:hover {
@@ -149,40 +146,65 @@ img:hover {
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode */
 }
 
-.project-shadow:hover {
-  /* box-shadow: inset 5px 5px 10px 10px gold; */
+.firstProject {
+  display: flex;
+}
+
+.firstProject  {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 50%;
+}
+
+a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cards {
+  box-shadow: inset 5px 5px 10px 10px gold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   border-radius: 5px;
+  max-width: 50%;
 }
 /* Remaining Project Images Below */
 
-/* .cards {
-  display: inline-flex;
+.cards a img {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 30%;
+  max-width: 50%;
+}
+
+/* .smallerProjects {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
-} */
+  justify-content: center;
+  align-items: baseline; */
+/* overflow: hidden;
 
-/* .smallerProjects img {
-  flex: 1 1 200px;
+.smallerProjects img {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 25%;
   border: 5px solid var(--heading-color);
-  width: 25%;
   margin: 10px;
-  position: relative;
-} */
+*/
 
-/* section a[href*="#placeholder"] {
-  background-color: gold;
-  bottom: 20px;
-  border: 5px var(--dark);
-} */
 
-/* Position Labels Inside Project Boxes */
+/* Position Labels Inside Project Boxes 
+causes labels to go behind image*/
 
-.label {
+/* .label {
   position: absolute;
   right: auto;
   margin-left: 10px;
-}
+} */
 
 /* footer - Contact Me */
 /* Need to finish */
@@ -213,12 +235,12 @@ footer {
 
 /* End Basic Styling - Begin Responsive Design */
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   #itsBrian {
     min-width: 25%;
-    min-height: 25;
+    min-height: 25%;
   }
-}
+} */
 
 @media screen and (max-width: 768px) {
 }
