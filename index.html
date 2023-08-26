@@ -12,11 +12,10 @@
     <!-- header start, work on CSS to move to the left or top-right -->
     <header>
       <h1>Brian Galyen's Dev Portfolio</h1>
-      <nav>
-        <!-- <img src="./assets/images/narutorun.gif" /> -->
+      <nav class="nav">
         <ul class="nav">
-          <li><a href="#aboutMe">About</a></li>
-          <li><a href="#projectList">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -26,9 +25,10 @@
       <!-- about me start -->
       <section>
         <h2 class="sectionLabels">About Me</h2>
-        <img src="./assets/images/selfimage.jpg" id="itsBrian" />
-        <article id="about-me">
-          <p>
+        <article>
+          <div class="aboutcontainer">
+            <img src="./assets/images/selfimage.jpg" id="itsBrian" />
+            <p>
             As a former teacher of eight years, I find the passion of problem
             solving come to life through full stack development. I want to find
             the most efficient ways to make life easier for everyone.
@@ -37,16 +37,19 @@
             engineering. Having sold my house, resigned from my full time job, I
             am ready to work towards this new career path.
           </p>
+          </div>
         </article>
       </section>
       <section> 
-        <h2 class="sectionLabels">Projects</h2>
+        <h2 class="sectionLabels" id="projects">Projects</h2>
         <article><h3 class="label">RockPaperScissors</h3>
          
           <a href="#placeholder"
           >
-            <div class="project-shadow"><img src="./assets/images/RockPaperScissors2.png" /></div
-        ></a>
+            <div class="project-shadow">
+              <img src="./assets/images/RockPaperScissors2.png" />
+            </div>
+          </a>
           
       </article>
       </section>
@@ -86,12 +89,15 @@
     </main>
 
     <footer>
-      <h3 id="contact">Contact Me</h3>
-      <ul class="contact-content">
-        <li>Brian Galyen</li>
-        <li>Email: <span id="email">galyenb@vcu.edu</span></li>
-        <li>Phone: <span>804-698-9125</span></li>
-      </ul>
+      
+        <h3 id="contact">Contact Me</h3>
+        <div class="footercontainer">
+          <ul class="contact-content">
+            <li>Brian Galyen</li>
+            <li>Email: <span id="email">galyenb@vcu.edu</span></li>
+            <li>Phone: <span>804-698-9125</span></li>
+        </ul>
+      </div>
     </footer>
 
     <!-- Naruto experiment -->
