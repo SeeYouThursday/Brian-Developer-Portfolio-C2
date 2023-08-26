@@ -98,21 +98,14 @@ a:visited {
 
 /* About Me Section Styling */
 
-article {
+#about-me {
   display: flex;
   flex-wrap: wrap;
   margin: 10px;
-  background-color: var(--heading-color);
   padding: 10px;
-  /* height: fit-content; */
   filter: drop-shadow(4px 4px 5px gray);
-  border: 5px var(--light);
-}
-
-/* revisit text color */
-article p {
-  flex: 1 1 100px;
-  color: var(--light);
+  border: 5px var(--heading-color);
+  color: blanchedalmond;
 }
 
 /* selfie */
@@ -124,62 +117,68 @@ article p {
 }
 
 /* First Project Image - larger than other app imgs */
-#firstProject {
-  flex: 1 0 400px;
-  /* order: 1; */
-  min-height: 200px;
-  min-width: 200px;
+a img {
+  flex: 1 0 auto;
+  /* height: 100%;
+  width: 100%; */
   border: 5px solid var(--heading-color);
   border-radius: 5px;
   margin-bottom: 10px;
 }
 
+img:hover {
+  mix-blend-mode: multiply;
+}
+
+.project-shadow:hover {
+  /* box-shadow: inset 5px 5px 10px 10px gold; */
+  border-radius: 5px;
+}
 /* Remaining Project Images Below */
 
-.cards {
+/* .cards {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* align-items: center; */
   width: 90%;
-}
-
-/* .smallerProjects {
-  flex: 1 1 200px;
-  border: 5px solid var(--heading-color);
-  width: 50%;
-  padding: 10px;
-  margin: 10px;
 } */
 
-.smallerProjects img {
+/* .smallerProjects img {
   flex: 1 1 200px;
   border: 5px solid var(--heading-color);
   width: 25%;
   margin: 10px;
   position: relative;
-}
+} */
 
-a[href*="#placeholder"] {
+/* section a[href*="#placeholder"] {
   background-color: gold;
-  backdrop-filter: focus(10px);
-  padding: 10px;
-  position: relative;
-  right: 14px;
+  bottom: 20px;
   border: 5px var(--dark);
-  border-style: groove;
+} */
+
+/* Position Labels Inside Project Boxes */
+article {
+  position: relative;
+  /* display: flex; */
+  width: 70%;
+  height: 70%;
 }
 
-/* Inside Project Boxes */
-.smallerProjects:hover h3 {
-  box-shadow: inset 5px 5px 5px gold;
+.label {
+  position: absolute;
+  right: auto;
+  margin-left: 10px;
 }
 
-#firstProject:hover {
+/* Fix Box Shadows */
+
+/* img:hover {
   box-shadow: inset 5px 5px 5px gold;
-}
+} */
 
 /* footer - Contact Me */
+/* Need to finish */
 footer {
   display: flex;
   flex-direction: column;

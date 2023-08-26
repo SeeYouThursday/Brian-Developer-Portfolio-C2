@@ -27,7 +27,7 @@
       <section>
         <h2 class="sectionLabels">About Me</h2>
         <img src="./assets/images/selfimage.jpg" id="itsBrian" />
-        <article>
+        <article id="about-me">
           <p>
             As a former teacher of eight years, I find the passion of problem
             solving come to life through full stack development. I want to find
@@ -39,15 +39,16 @@
           </p>
         </article>
       </section>
-      <!-- First Project -->
-      <section id="projectList">
+      <section> 
         <h2 class="sectionLabels">Projects</h2>
-      </section>
-
-      <section >
-        <h3>Project 1</h3>
-        <img id="firstProject" src="./assets/images/RockPaperScissorsScaledDown.png" />
-        <a href="#placeholder">Rock Paper Scissors App</a>
+        <article><h3 class="label">RockPaperScissors</h3>
+         
+          <a href="#placeholder"
+          >
+            <div class="project-shadow"><img src="./assets/images/RockPaperScissors2.png" /></div
+        ></a>
+          
+      </article>
       </section>
       <br />
       <!-- smaller project cards -->
@@ -55,13 +56,18 @@
       <section class="cards">
         <section class="smallerProjects">
           <h3 class="label">JS Random Number Generator</h3>
-          <a href="#placeholder"><img src="./assets/images/Untitled.png" /></a>
+          <div class="project-shadow"></div><a href="#placeholder"
+            >
+              <img src="./assets/images/scaleddownnum.png" /></a></div
+          >
         </section>
 
         <section class="smallerProjects">
           <h3 class="label">Connect Four Game App</h3>
-          <img src="./assets/images/Placeholder.png" />
-          <a href="#placeholder">JS</a>
+          <a href="#placeholder"></a><div class="project-shadow">
+            <img src="./assets/images/Placeholder.png" />
+          </div>
+          JS</a>
         </section>
 
         <section class="smallerProjects">
@@ -72,9 +78,9 @@
 
         <section class="smallerProjects">
           <h3 class="label">Birthday Reminder App</h3>
-          <!-- <p>React</p> -->
-          <a href="#placeholder"></a><img  src="./assets/images/Placeholder.png" />Built with React</a>
-          
+          <a href="#placeholder"
+            ><img src="./assets/images/Placeholder.png" />Built with React</a
+          >
         </section>
       </section>
     </main>
