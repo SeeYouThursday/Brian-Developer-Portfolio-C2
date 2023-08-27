@@ -9,6 +9,8 @@
   box-sizing: border-box;
 }
 
+/* color pallete link: https://coolors.co/3e78b2-004ba8-4a525a-24272b-07070a */
+
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: var(--light);
@@ -29,7 +31,6 @@ header {
   box-shadow: 5px 10px 10px var(--light);
   background-color: var(--heading-color);
   align-content: baseline;
-  margin: 0px;
 }
 
 h1 {
@@ -52,7 +53,7 @@ h1 {
   list-style-type: none;
   font-size: 20px;
   text-align: center;
-  /* width: 100%; */
+  width: 100%;
   background-color: var(--heading-color);
   font-weight: bolder;
   /* margin-right: 20px; */
@@ -66,13 +67,13 @@ h1 {
   padding: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  /* width: 100%; */
-  /* position: relative; */
+  width: 100%;
+  position: relative;
   text-align: center;
 }
 
-nav ul li a {
-  flex: 1 1 40%;
+nav li a {
+  flex: 1 1 400px;
   text-align: center;
   text-decoration: none;
   color: yellow;
@@ -94,16 +95,9 @@ a:visited {
 }
 /* Generic Section Headings Styling */
 
-main {
-  margin: 0px;
-  padding: 10px;
-  background-color: #232c33;
-}
-
 .sectionLabels {
-  display: block;
   border-bottom: 5px solid var(--border-bottom);
-  line-height: 40px;
+  height: 40px;
   margin: 18px;
   color: yellow;
   transform: skew(-9deg);
@@ -134,33 +128,46 @@ article p {
 /* selfie */
 #itsBrian {
   flex-basis: 10%;
-  /* max-width: 20%; */
+  max-width: 20%;
 }
 
 /* Revisit - First Project Image - larger than other app imgs */
 
-/* .firstProject {
-  display: flex;
+.firstProject {
+  display: block;
+  max-width: 50%;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 50%;
-  min-height: 0px;
+}
+
+a[href*="scissors"] img {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 50%;
+  margin: 10px;
+}
+
+/* a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 } */
 
 /* Remaining Project Images Below */
 
-/* .project-container {
+.project-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-} */
+}
 
 .cards ul li {
-  display: inline-flex;
-  flex-direction: inherit;
-  flex-wrap: wrap;
+  list-style-type: none;
 }
+
 
 /* footer - Contact Me */
 /* Need to finish */
@@ -183,6 +190,10 @@ footer {
   color: yellow;
   background-color: var(--heading-color);
   box-shadow: 5px 10px 10px var(--light);
+}
+
+.contact-content {
+  list-style-type: none;
 }
 
 /* End Basic Styling - Begin Responsive Design */
