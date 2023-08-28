@@ -9,6 +9,12 @@
   box-sizing: border-box;
 }
 
+/* dark mode? */
+
+/* html {
+  color-scheme: dark light;
+} */
+
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: var(--light);
@@ -19,16 +25,18 @@ body {
 
 header {
   /* set the flex-direction to row until browser gets smaller than 768px in media query at the bottom */
-  max-width: inherit;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  /* align-items: baseline; */
+  min-width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
   box-shadow: 5px 10px 10px var(--light);
   background-color: var(--heading-color);
   align-content: baseline;
   margin: 0px;
+  padding: 0px;
+  border: 0px;
 }
 
 h1 {
@@ -128,10 +136,16 @@ article p {
   max-width: 20%;
 }
 
+main {
+  margin: 0px;
+  padding: 10px;
+}
+
 /* still have responsive issues with this on shrink */
 .firstProject {
   display: flex;
   margin: 10px;
+  /* border does not work */
   border: 10000px #232c33;
   justify-content: center;
   align-items: center;
@@ -141,16 +155,42 @@ article p {
   /* min-height: 0px; */
 }
 
-.cards ul {
+.smallcards ul {
   margin: 0px;
   padding: 40px;
+  line-height: 5em;
   border: 20px solid var(--dark);
   list-style-type: none;
   flex-direction: row;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.smallcards ul li {
+  flex-shrink: 2;
+  flex-grow: 0;
+  /* flex-basis: 50%; */
+  padding: 20px 20px 0px 20px;
+  margin: 15px;
+  border: 5px solid #232c33;
+  border-bottom-color: var(--dark);
+  border-radius: 5%;
+  position: relative;
+}
+
+.label-wrapper {
+  position: absolute;
+  top: 0.09%;
+  left: 40%;
+  line-height: normal;
+  text-align: center;
+  text-align-last: center;
+  /* z-index: */
+  display: block;
+  box-shadow: 4px 4px 10px 12px inset gold;
+  border-top-right-radius: 8%;
 }
 
 .footercontainer {
@@ -169,12 +209,29 @@ article p {
   box-shadow: 5px 10px 10px var(--light);
 }
 
-main {
-  margin: 0px;
-  padding: 10px;
-  background-color: #232c33;
+@media screen and (max-width: 1024px) {
 }
 
+@media screen and (max-width: 768px) {
+}
+
+/* without main project picture - below is only needed */
+@media screen and (max-width) {
+  .nav {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav {
+    flex-wrap: wrap;
+    position: relative;
+    right: 10px;
+  }
+  .aboutcontainer {
+    flex-direction: column;
+  }
+}
 /* testing area */
 
 /* nothing happens here - not sure why - figure out later */
