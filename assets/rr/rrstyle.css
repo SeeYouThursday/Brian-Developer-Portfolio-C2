@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+button {
+  border-color: aqua;
+  border-radius: 100%;
+  padding: 50px;
+  box-shadow: 5px 5px 5px;
+}
