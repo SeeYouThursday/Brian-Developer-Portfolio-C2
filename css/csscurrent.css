@@ -118,6 +118,8 @@ a:visited {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  background-color: var(--heading-color);
+  padding: 10px 0px;
 }
 
 article p {
