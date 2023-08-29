@@ -95,6 +95,7 @@ main {
 .sectionLabels {
   display: block;
   border-bottom: 5px solid var(--border-bottom);
+  border-top: 5px solid var(--border-bottom);
   line-height: 40px;
   margin: 0px;
   color: yellow;
@@ -102,7 +103,8 @@ main {
   background-color: var(--heading-color);
   box-shadow: 5px 10px 10px var(--light);
 }
-/* good to go */
+
+/* About Me Content Styling */
 
 .about-container {
   display: flex;
@@ -212,7 +214,11 @@ blockquote p {
   line-height: 40px;
   margin: 0px;
   color: yellow;
-  padding: 10px 10px 10px 45px;
+  padding: 10px 10px 10px 65px;
+}
+
+.smallcards {
+  padding: 0px;
 }
 
 .smallcards ul {
@@ -220,7 +226,10 @@ blockquote p {
   margin: 0px;
   padding: 3%;
   line-height: 5em;
-  border: 20px solid var(--dark);
+  border-top: 20px solid var(--dark);
+  border-bottom: 20px solid var(--dark);
+  border-right: 100px solid var(--dark);
+  border-left: 100px solid var(--dark);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -229,9 +238,9 @@ blockquote p {
 }
 
 .smallcards ul li {
-  flex-shrink: 1;
+  display: flex;
+  flex-shrink: 5;
   flex-grow: 0;
-  flex-basis: 0;
   /* messes with responsive for large screens consider media query */
   margin: 2%;
   border-top: 5px solid #232c33;
@@ -240,26 +249,40 @@ blockquote p {
 }
 
 .smallcards ul li a {
+  display: flex;
+  flex-basis: auto;
   border-bottom: 5px solid;
 }
 
-.pro-label-wrapper {
-  position: absolute;
-  top: 0.09%;
-  /* left: 40%; do not want */
-  line-height: normal;
-  text-align: center;
-  /* text-align-last: center; */
-  /* z-index: */
-  display: block;
-  box-shadow: 4px 4px 10px 12px inset gold;
-  border-radius: 2% 2% 0% 0%;
+.smallcards ul li a img {
+  flex-shrink: 5;
+  flex-basis: auto;
 }
 
-.footercontainer {
+.pro-label-wrapper {
+  display: none;
+  position: absolute;
+  top: 0.09%;
+  line-height: normal;
+  text-align: center;
+}
+
+.smallcards li:hover .pro-label-wrapper {
+  display: block;
+  z-index: 1;
+  line-height: normal;
+  text-align: center;
+  /* box-shadow: 4px 4px 10px 12px inset gold; */
+}
+
+.contact-content {
+  /* display: flex; */
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  /* margin: 5%; */
 }
 
 #contact {
