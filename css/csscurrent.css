@@ -1,9 +1,51 @@
-:root {
+/* :root {
+  --light: #;
+  --heading-color: #;
+  --dark: #;
+  --border-bottom: #; 
+} */
+
+/* Original below */
+/* :root {
   --light: #a0c1d1;
   --heading-color: #232c33;
   --dark: #5a7d7c;
   --border-bottom: white;
+} */
+
+/* :root {
+  --light: #ffc23c;
+  --heading-color: #31087b;
+  --dark: #100720;
+  --border-bottom: #FA2FB5; 
+} */
+
+/* below is okay */
+/* :root {
+  --light: #DFF6FF;
+  --heading-color: #1363df;
+  --dark: #06283D;
+  --border-bottom: #47b5ff; 
+} */
+
+/* :root {
+  --light: #fc9918;
+  --heading-color: #F14a16;
+  --dark: #370665;
+  --border-bottom: #35589a; 
+} */
+
+
+
+:root {
+  --light: #4dd599;
+  /* --heading-color: #ffdc34; */
+  --heading-color: #00918e;
+  --dark: #110133;
+  --border-bottom: #00918e;
+  --heading-text-color: #ffdc34; 
 }
+
 
 * {
   box-sizing: border-box;
@@ -13,6 +55,20 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: var(--light);
   margin: 0;
+}
+
+/* Link Styling */
+
+a:link {
+  color: yellow;
+}
+
+a:visited {
+  color: initial;
+}
+
+a:hover {
+  color: black;
 }
 
 /* header styling */
@@ -36,8 +92,16 @@ header {
 h1 {
   flex: 1 3;
   flex-basis: 25%;
-  color: yellow;
+  color: var(--heading-text-color);
   padding: 10px;
+}
+
+h3 {
+  background-color: var(--border-bottom);
+  padding: 1%;
+  border-bottom: 5px solid ;
+  border-bottom-style:dashed;
+  margin: 0;
 }
 
 /* nav styling */
@@ -71,7 +135,7 @@ nav ul li a {
   flex: 1 1 40%;
   text-align: center;
   text-decoration: none;
-  color: yellow;
+  color: var(--heading-text-color);
   /* width does nothing of value here currently */
 }
 
@@ -81,21 +145,10 @@ nav ul li a {
   box-shadow: inset 5px 5px 15px gold;
 }
 
-a:link {
-  color: yellow;
-}
-
-a:visited {
-  color: initial;
-}
-
-a:hover {
-  color: black;
-}
+/* Main Portion of Site */
 
 main {
   margin: 0px;
-  /* padding: 10px; */
   border-top: 10px solid var(--dark);
   border-bottom: 10px solid var(--dark);
 }
@@ -106,7 +159,7 @@ main {
   border-top: 5px solid var(--border-bottom);
   line-height: 40px;
   margin: 0px;
-  color: yellow;
+  color: var(--heading-text-color);
   padding: 10px 10px 10px 45px;
   background-color: var(--heading-color);
   box-shadow: 5px 10px 10px var(--light);
@@ -151,6 +204,8 @@ article p {
 
 /* First Project App */
 
+
+
 .firstProject-contents {
   display: flex;
   flex-direction: column;
@@ -159,6 +214,7 @@ article p {
   align-items: center;
   padding: 0px;
   position: relative;
+  margin-bottom: 0;
 }
 
 /* still have responsive issues with this on shrink */
@@ -190,13 +246,15 @@ article p {
   line-height: normal;
   text-align: center;
   color: black;
-  background-color: yellow;
+  background-color: var(--heading-text-color);
   box-shadow: 4px 4px 5px 5px gold;
 }
 
 .firstProject-contents:hover .initial-pro-label-wrapper {
   display: flex;
 }
+
+/* Blockquote Styling throughout below */
 
 /* optained from css-tricks.com */
 blockquote {
@@ -216,6 +274,16 @@ blockquote:before {
 }
 blockquote p {
   display: inline;
+}
+
+aside {
+  /* float: left; */
+  display: flex;
+  position: relative;
+  right: 30%;
+  bottom: 30%;
+  display: block;
+
 }
 
 /* Small Project Cards "Notable Mentions"*/
