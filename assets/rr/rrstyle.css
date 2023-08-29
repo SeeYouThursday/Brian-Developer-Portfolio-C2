@@ -6,9 +6,59 @@ html {
   color-scheme: dark light;
 }
 
+a:link {
+  color: yellow;
+}
+
+a:visited {
+  color: initial;
+}
+
+a:hover {
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: darkslategray;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.firstStep {
+  background-color: slategray;
+  margin: 10px;
+  /* padding: 10px; */
+  padding-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+/* .firstStep h3 */
+/* 
+article {
+  display: flex;
+  /* flex-direction: column;
+  justify-content: center;
+  align-content: center;
+ } */
+
 button {
   border-color: aqua;
   border-radius: 100%;
-  padding: 50px;
+  padding: 100px;
+  margin-left: 10%;
   box-shadow: 5px 5px 5px;
+  cursor: pointer;
+  font-size: 100px;
 }
