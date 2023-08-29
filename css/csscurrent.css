@@ -111,6 +111,7 @@ main {
   justify-content: center;
   align-items: center;
   background-color: var(--heading-color);
+  box-shadow: 5px 10px 10px var(--light);
   padding: 10px 10px;
   font-size: 16px;
 }
@@ -135,6 +136,7 @@ article p {
   margin-left: 60px;
   max-width: 20%;
   border-radius: 4%;
+  box-shadow: 5px 10px 10px var(--light);
 }
 
 /* First Project App */
@@ -164,6 +166,7 @@ article p {
   flex-grow: 0;
   flex-basis: 20%;
   padding: 0px;
+  max-width: 100%;
 }
 
 .initial-pro-label-wrapper {
@@ -238,17 +241,17 @@ blockquote p {
   position: relative;
 }
 
-.label-wrapper {
+.pro-label-wrapper {
   position: absolute;
   top: 0.09%;
-  left: 40%;
+  /* left: 40%; do not want */
   line-height: normal;
   text-align: center;
-  text-align-last: center;
+  /* text-align-last: center; */
   /* z-index: */
   display: block;
   box-shadow: 4px 4px 10px 12px inset gold;
-  border-top-right-radius: 8%;
+  border-radius: 2% 2% 0% 0%;
 }
 
 .footercontainer {
@@ -300,17 +303,17 @@ blockquote p {
     border-radius: 4%;
   }
 
-  .firstProject-contents {
+  /* .firstProject-contents {
     flex-wrap: wrap;
-  }
+  } */
 
   .firstProject-contents a img {
-    max-width: 90%;
+    flex-shrink: 1000;
   }
 
-  .firstProject {
+  /* .firstProject {
     margin-left: 8px;
-  }
+  } */
 }
 
 @media screen and (max-width: 375px) {
@@ -323,9 +326,7 @@ blockquote p {
   .smallcards ul li {
     flex-shrink: 2;
     flex-grow: 0;
-    /* flex-basis: 50%; messes with responsive for large screens consider media query*/
     padding: 20px 20px 0px 20px;
-    /* margin: 2px; */
     border: 5px solid #232c33;
     border-bottom-color: var(--dark);
     border-radius: 5%;
