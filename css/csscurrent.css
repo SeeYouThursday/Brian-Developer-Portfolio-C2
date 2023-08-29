@@ -179,7 +179,6 @@ article p {
   z-index: -1;
   display: none;
   box-shadow: 4px 4px 10px 12px inset gold;
-  /* border-top-right-radius: 8%; */
 }
 
 /* optained from css-tricks.com */
@@ -204,7 +203,7 @@ blockquote p {
 
 /* Revisit */
 
-#smallpros {
+#smallpros-heading {
   background-color: #232c33;
   margin: 0px;
   color: yellow;
@@ -234,7 +233,8 @@ blockquote p {
   flex-grow: 0;
   flex-basis: 0;
   /* messes with responsive for large screens consider media query */
-  margin: 15px;
+  /* margin: 15px 15px 15px 15px; */
+  margin: 2%;
   border: 5px solid #232c33;
   border-bottom-color: var(--dark);
   border-radius: 5%;
@@ -324,21 +324,20 @@ blockquote p {
   }
 
   .smallcards ul li {
-    flex-shrink: 2;
+    flex-shrink: 5;
     flex-grow: 0;
-    padding: 20px 20px 0px 20px;
-    border: 5px solid #232c33;
-    border-bottom-color: var(--dark);
+    padding: 0;
+    margin-right: 50%;
+    margin-left: 50%;
+    border: 0px;
+    /*border-bottom-color: var(--dark);
     border-radius: 5%;
-    position: relative;
+    position: relative;*/
+  }
+
+  .smallcards ul {
+    border: 0px;
   }
 }
-/* testing area */
 
-/* nothing happens here - not sure why - figure out later */
-/* .project-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-} */
+/* testing area */
