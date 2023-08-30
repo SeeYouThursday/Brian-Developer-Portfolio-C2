@@ -1,11 +1,3 @@
-/* :root {
-  --light: #;
-  --heading-color: #;
-  --dark: #;
-  --border-bottom: #; 
-} */
-
-/* Original below */
 :root {
   --light: #a0c1d1;
   --heading-color: #232c33;
@@ -256,14 +248,12 @@ blockquote p {
 }
 
 .smallprojectlabel h3 {
-  /* max-width: inherit; */
   flex: 1 5 0;
   text-align: center;
 }
 
 .smallcards {
   padding: 0px;
-  /* display: flex; */
 }
 
 .smallcards ul {
@@ -309,7 +299,7 @@ blockquote p {
 .pro-label-wrapper {
   display: none;
   position: absolute;
-  top: 0.09%;
+  top: 10%;
   line-height: normal;
   text-align: center;
 }
