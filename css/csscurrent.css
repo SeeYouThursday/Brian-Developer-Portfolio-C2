@@ -3,6 +3,7 @@
   --heading-color: #232c33;
   --dark: #5a7d7c;
   --border-bottom: white;
+  --yellow: yellow;
 }
 
 * {
@@ -21,21 +22,19 @@ a:link {
   color: yellow;
 }
 
-a:visited {
-  color: initial;
-}
+/* a:visited {
+  color: aqua;
+} */
 
 a:hover {
   color: black;
+  /* filter: sepia(50%); */
 }
 
-/* header styling */
-
 header {
-  /* set the flex-direction to row until browser gets smaller than 768px in media query at the bottom */
   min-width: 100%;
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
@@ -50,21 +49,10 @@ header {
 h1 {
   flex: 1 3;
   flex-basis: 25%;
-  color: var(--heading-text-color);
+  color: var(--yellow);
   padding: 10px;
 }
 
-#dev-portfolio-label {
-  background-color: var(--border-bottom);
-  padding: 1%;
-  border-bottom: 5px solid;
-  border-bottom-style: dashed;
-  margin: 0;
-  text-align: center;
-  line-height: normal;
-}
-
-/* nav styling */
 /* adjust width here to affect the background of the navbar */
 .nav {
   /* two below make the nav contents into a row */
@@ -95,7 +83,7 @@ nav ul li a {
   flex: 1 1 40%;
   text-align: center;
   text-decoration: none;
-  color: var(--heading-text-color);
+  color: yellow;
   /* width does nothing of value here currently */
 }
 
@@ -104,8 +92,6 @@ nav ul li a {
 .nav li:active {
   box-shadow: inset 5px 5px 15px gold;
 }
-
-/* Main Portion of Site */
 
 main {
   margin: 0px;
@@ -119,7 +105,7 @@ main {
   border-top: 5px solid var(--border-bottom);
   line-height: 40px;
   margin: 0px;
-  color: var(--heading-text-color);
+  color: var(--yellow);
   padding: 10px 10px 10px 45px;
   background-color: var(--heading-color);
   box-shadow: 5px 10px 10px var(--light);
@@ -159,17 +145,24 @@ article p {
   background-color: var(--heading-color);
 }
 
-.self-wrapper {
+.selfie-wrapper {
   display: flex;
   justify-self: center;
   margin-right: 5%;
 }
 
-.self-wrapper img {
+.selfie-wrapper img {
   flex: 2 0 200px;
 }
 
-/* First Project App */
+#dev-portfolio-label {
+  background-color: var(--border-bottom);
+  padding: 1%;
+  border-bottom: 5px dashed;
+  margin: 0;
+  text-align: center;
+  line-height: normal;
+}
 
 .firstProject-contents {
   display: flex;
@@ -179,7 +172,7 @@ article p {
   align-items: center;
   padding: 0px;
   position: relative;
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 .firstProject-contents a {
@@ -198,8 +191,6 @@ article p {
   padding: 0px;
   max-width: 100%;
 }
-
-/* Blockquote Styling throughout below */
 
 /* optained from css-tricks.com */
 blockquote {
@@ -244,11 +235,6 @@ blockquote p {
   margin: 0;
   line-height: normal;
   font-size: 16px;
-  text-anchor: middle;
-}
-
-.smallprojectlabel h3 {
-  flex: 1 5 0;
   text-align: center;
 }
 
@@ -259,7 +245,7 @@ blockquote p {
 .smallcards ul {
   list-style-type: none;
   margin: 0px;
-  padding: 3%;
+  padding: 2%;
   line-height: 5em;
   border-top: 20px solid var(--dark);
   border-bottom: 20px solid var(--dark);
@@ -274,26 +260,28 @@ blockquote p {
 }
 
 .smallcards ul li {
-  display: flex;
+  display: block;
   flex-shrink: 1;
   flex-grow: 0;
-  /* min-width: 25%; */
-  /* messes with responsive for large screens consider media query */
   margin: 2%;
   border-top: 5px solid #232c33;
   border-bottom-color: var(--dark);
   position: relative;
+  filter: drop-shadow(25px black);
+}
+
+.smallcards ul li,
+.firstProject-contents a img:hover {
+  filter: invert(10%);
 }
 
 .smallcards ul li a {
   display: flex;
   flex-wrap: wrap;
-  /* flex-shrink: inherit; */
 }
 
 .smallcards ul li a img {
   border-bottom: 5px solid;
-  /* max-width: 55%; */
 }
 
 .pro-label-wrapper {
@@ -348,13 +336,15 @@ blockquote p {
   }
 
   .smallcards ul {
-    /* flex-wrap: nowrap; */
-
     padding: 0%;
   }
 }
 
 @media screen and (max-width: 769px) {
+  header {
+    flex-direction: column;
+  }
+
   .about-container {
     font-size: 1.35em;
   }
@@ -365,6 +355,11 @@ blockquote p {
     border-right: 0px;
     border-left: 0px;
   }
+}
+
+.firstProject-contents {
+  border-right: 0px solid #5a7d7c;
+  border-left: 0px solid #5a7d7c;
 }
 
 @media screen and (max-width: 426px) {
@@ -399,6 +394,7 @@ blockquote p {
   }
 
   .smallcards ul li {
+    display: block;
     flex-shrink: 5;
     flex-grow: 0;
     padding: 0;
@@ -418,9 +414,9 @@ blockquote p {
   }
 }
 
-@media screen and (max-width: 321px) {
+/* @media screen and (max-width: 321px) {
   .smallcards ul li {
     display: block;
   }
-}
+} */
 /* testing area */
