@@ -13,37 +13,6 @@
   --border-bottom: white;
 }
 
-/* :root {
-  --light: #ffc23c;
-  --heading-color: #31087b;
-  --dark: #100720;
-  --border-bottom: #FA2FB5; 
-} */
-
-/* below is okay */
-/* :root {
-  --light: #DFF6FF;
-  --heading-color: #1363df;
-  --dark: #06283D;
-  --border-bottom: #47b5ff; 
-} */
-
-/* :root {
-  --light: #fc9918;
-  --heading-color: #F14a16;
-  --dark: #370665;
-  --border-bottom: #35589a; 
-} */
-
-/* :root {
-  --light: #4dd599;
-  --heading-color: #ffdc34;
-  --heading-color: #00918e;
-  --dark: #110133;
-  --border-bottom: #00918e;
-  --heading-text-color: #ffdc34; 
-} */
-
 * {
   box-sizing: border-box;
 }
@@ -102,7 +71,6 @@ h1 {
   text-align: center;
   line-height: normal;
 }
-
 
 /* nav styling */
 /* adjust width here to affect the background of the navbar */
@@ -276,7 +244,6 @@ blockquote p {
 }
 
 .smallprojectlabel {
-  display: flex;
   background-color: var(--border-bottom);
   padding: 1%;
   border-bottom: 5px solid;
@@ -291,10 +258,12 @@ blockquote p {
 .smallprojectlabel h3 {
   /* max-width: inherit; */
   flex: 1 5 0;
+  text-align: center;
 }
 
 .smallcards {
   padding: 0px;
+  /* display: flex; */
 }
 
 .smallcards ul {
@@ -445,6 +414,8 @@ blockquote p {
     padding: 0;
     margin-right: 50%;
     margin-left: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
     border: 0px;
   }
 
@@ -457,4 +428,9 @@ blockquote p {
   }
 }
 
+@media screen and (max-width: 321px) {
+  .smallcards ul li {
+    display: block;
+  }
+}
 /* testing area */
