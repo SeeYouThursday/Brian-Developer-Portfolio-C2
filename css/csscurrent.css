@@ -6,12 +6,12 @@
 } */
 
 /* Original below */
-/* :root {
+:root {
   --light: #a0c1d1;
   --heading-color: #232c33;
   --dark: #5a7d7c;
   --border-bottom: white;
-} */
+}
 
 /* :root {
   --light: #ffc23c;
@@ -35,17 +35,14 @@
   --border-bottom: #35589a; 
 } */
 
-
-
-:root {
+/* :root {
   --light: #4dd599;
-  /* --heading-color: #ffdc34; */
+  --heading-color: #ffdc34;
   --heading-color: #00918e;
   --dark: #110133;
   --border-bottom: #00918e;
   --heading-text-color: #ffdc34; 
-}
-
+} */
 
 * {
   box-sizing: border-box;
@@ -96,13 +93,16 @@ h1 {
   padding: 10px;
 }
 
-h3 {
+#dev-portfolio-label {
   background-color: var(--border-bottom);
   padding: 1%;
-  border-bottom: 5px solid ;
-  border-bottom-style:dashed;
+  border-bottom: 5px solid;
+  border-bottom-style: dashed;
   margin: 0;
+  text-align: center;
+  line-height: normal;
 }
+
 
 /* nav styling */
 /* adjust width here to affect the background of the navbar */
@@ -171,19 +171,27 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: safe;
   align-items: center;
   background-color: var(--heading-color);
   box-shadow: 5px 10px 10px var(--light);
   padding: 10px 10px;
-  font-size: 16px;
+  font-size: 1em;
+  min-width: none;
+}
+
+article img {
+  margin-left: 10%;
+  flex-shrink: 1;
+  /* min-width: none;
+ min-height: none; */
 }
 
 article p {
   flex-grow: 1;
   flex-shrink: 1;
   margin-left: 50px;
-  margin-right: 100px;
+  margin-right: 20%;
   padding: 10px;
   filter: drop-shadow(4px 4px 5px gray);
   border: 5px var(--heading-color);
@@ -191,20 +199,17 @@ article p {
   background-color: var(--heading-color);
 }
 
-/* selfie */
-#itsBrian {
-  flex-shrink: 1;
-  flex-grow: 0;
-  flex-basis: 20%;
-  margin-left: 60px;
-  max-width: 20%;
-  border-radius: 4%;
-  box-shadow: 5px 10px 10px var(--light);
+.self-wrapper {
+  display: flex;
+  justify-self: center;
+  margin-right: 5%;
+}
+
+.self-wrapper img {
+  flex: 2 0 200px;
 }
 
 /* First Project App */
-
-
 
 .firstProject-contents {
   display: flex;
@@ -217,7 +222,6 @@ article p {
   margin-bottom: 0;
 }
 
-/* still have responsive issues with this on shrink */
 .firstProject-contents a {
   display: flex;
   margin: 10px;
@@ -233,25 +237,6 @@ article p {
   flex-basis: 20%;
   padding: 0px;
   max-width: 100%;
-}
-
-.initial-pro-label-wrapper {
-  display: none;
-  position: absolute;
-  bottom: 25%;
-  margin: 10px;
-  /* width: 10%; */
-  left: 35%;
-  font-size: 0.85em;
-  line-height: normal;
-  text-align: center;
-  color: black;
-  background-color: var(--heading-text-color);
-  box-shadow: 4px 4px 5px 5px gold;
-}
-
-.firstProject-contents:hover .initial-pro-label-wrapper {
-  display: flex;
 }
 
 /* Blockquote Styling throughout below */
@@ -276,16 +261,6 @@ blockquote p {
   display: inline;
 }
 
-aside {
-  /* float: left; */
-  display: flex;
-  position: relative;
-  right: 30%;
-  bottom: 30%;
-  display: block;
-
-}
-
 /* Small Project Cards "Notable Mentions"*/
 
 #smallpros-heading {
@@ -298,6 +273,24 @@ aside {
   margin: 0px;
   color: yellow;
   padding: 10px 10px 10px 65px;
+}
+
+.smallprojectlabel {
+  display: flex;
+  background-color: var(--border-bottom);
+  padding: 1%;
+  border-bottom: 5px solid;
+  border-bottom-style: dashed;
+  overflow-wrap: break-word;
+  margin: 0;
+  line-height: normal;
+  font-size: 16px;
+  text-anchor: middle;
+}
+
+.smallprojectlabel h3 {
+  /* max-width: inherit; */
+  flex: 1 5 0;
 }
 
 .smallcards {
@@ -313,6 +306,7 @@ aside {
   border-bottom: 20px solid var(--dark);
   border-right: 100px solid var(--dark);
   border-left: 100px solid var(--dark);
+  /* flex start */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -322,8 +316,9 @@ aside {
 
 .smallcards ul li {
   display: flex;
-  flex-shrink: 5;
+  flex-shrink: 1;
   flex-grow: 0;
+  /* min-width: 25%; */
   /* messes with responsive for large screens consider media query */
   margin: 2%;
   border-top: 5px solid #232c33;
@@ -333,13 +328,13 @@ aside {
 
 .smallcards ul li a {
   display: flex;
-  flex-basis: auto;
-  border-bottom: 5px solid;
+  flex-wrap: wrap;
+  /* flex-shrink: inherit; */
 }
 
 .smallcards ul li a img {
-  flex-shrink: 5;
-  flex-basis: auto;
+  border-bottom: 5px solid;
+  /* max-width: 55%; */
 }
 
 .pro-label-wrapper {
@@ -352,20 +347,22 @@ aside {
 
 .smallcards li:hover .pro-label-wrapper {
   display: block;
-  z-index: 1;
+  /* z-index: 1; */
   line-height: normal;
   text-align: center;
-  /* box-shadow: 4px 4px 10px 12px inset gold; */
 }
 
+/* footer - contact info */
+
 .contact-content {
-  /* display: flex; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   list-style: none;
-  /* margin: 5%; */
+  font-size: medium;
+  padding: 10px;
+  margin: 0;
 }
 
 #contact {
@@ -379,17 +376,35 @@ aside {
 }
 
 /* Media Queries */
-
-@media screen and (max-width: 1024px) {
-  article p {
-    margin: 10px;
+@media screen and (max-width: 1441px) {
+  .about-container {
+    font-size: 1.5em;
+    justify-content: center;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
+  article p {
+    margin: 10px;
+  }
+
   .smallcards ul {
-    flex-wrap: wrap;
+    /* flex-wrap: nowrap; */
+
     padding: 0%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .about-container {
+    font-size: 1.35em;
+  }
+
+  .smallcards ul {
+    border-top: 5px solid var(--dark);
+    border-bottom: 5px solid var(--dark);
+    border-right: 0px;
+    border-left: 0px;
   }
 }
 
@@ -402,30 +417,26 @@ aside {
     flex-wrap: wrap;
   }
 
+  article img {
+    max-width: 35vh;
+  }
+
   .about-container {
     flex-direction: column;
     font-size: 14px;
-  }
-
-  #itsBrian {
-    flex-shrink: 1;
-    flex-grow: 0;
-    flex-basis: 20%;
-    max-width: 50%;
-    border-radius: 4%;
-  }
-  .smallcards ul {
-    border-top: 5px solid var(--dark);
-    border-bottom: 5px solid var(--dark);
-    border-right: 5px solid var(--dark);
-    border-left: 5px solid var(--dark);
+    flex-wrap: wrap;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
   .nav {
     position: relative;
     right: 10px;
+  }
+
+  article p {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .smallcards ul li {
@@ -434,7 +445,7 @@ aside {
     padding: 0;
     margin-right: 50%;
     margin-left: 50%;
-    /* border: 0px; */
+    border: 0px;
   }
 
   .contact-content {
