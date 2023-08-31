@@ -129,8 +129,6 @@ main {
 .about-container p {
   flex-grow: 1;
   flex-shrink: 1;
-  margin-left: 50px;
-  margin-right: 20%;
   padding: 10px;
   filter: drop-shadow(4px 4px 5px gray);
   border: 5px var(--heading-color);
@@ -171,7 +169,7 @@ main {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  padding: 0px;
+  padding: 10px;
   position: relative;
   margin-bottom: 0px;
 }
@@ -226,6 +224,9 @@ blockquote p {
   display: inline;
 }
 
+.firstProject-contents a img:hover {
+  filter: invert(10%);
+}
 /* Small Project Cards "Notable Mentions"*/
 
 #smallpros-heading {
@@ -283,10 +284,6 @@ blockquote p {
 }
 
 .smallcards ul li,
-.firstProject-contents a img:hover {
-  filter: invert(10%);
-}
-
 .smallcards ul li a {
   display: flex;
   flex-wrap: wrap;
@@ -357,9 +354,9 @@ blockquote p {
     flex-direction: column;
   }
 
-  .about-container {
-    font-size: 1.35em;
-  }
+  /* .about-container {
+    height: 200px;
+  } */
 
   .smallcards ul {
     border-top: 5px solid var(--dark);
@@ -433,6 +430,10 @@ blockquote p {
     margin: 0;
     font-size: x-small;
     padding: 0;
+  }
+
+  .firstProject-contents {
+    padding: 0px;
   }
 }
 /* testing area */
