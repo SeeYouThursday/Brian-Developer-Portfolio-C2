@@ -191,8 +191,11 @@ main {
   max-width: 100%;
 }
 
-h4 {
+.firstProject-contents h4 {
+  border: #232c33 solid;
   border-bottom: #232c33 dashed;
+  background-color: whitesmoke;
+  padding: 10px;
 }
 
 #first-descrip {
