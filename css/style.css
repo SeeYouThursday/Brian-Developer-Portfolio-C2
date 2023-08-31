@@ -154,18 +154,20 @@ main {
   border-radius: 3%;
 }
 
-#dev-portfolio-label {
+/* removed below because label was in the screenshot provided */
+
+/* #dev-portfolio-label {
   background-color: var(--border-bottom);
   padding: 1%;
   border-bottom: 5px dashed;
   margin: 0;
   text-align: center;
   line-height: normal;
-}
+} */
 
 .firstProject-contents {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
@@ -176,8 +178,6 @@ main {
 
 .firstProject-contents a {
   display: flex;
-  margin: 10px;
-  /* border does not work */
   justify-content: center;
   align-items: center;
   position: relative;
@@ -185,14 +185,18 @@ main {
 
 .firstProject-contents a img {
   border: 5px solid var(--dark);
-  flex-grow: 0;
-  flex-basis: 20%;
+  flex-grow: 1;
+  flex-basis: 300px;
   padding: 0px;
   max-width: 100%;
 }
 
+h4 {
+  border-bottom: #232c33 dashed;
+}
+
 #first-descrip {
-  flex: 2 0 200px;
+  flex: 2 1 200px;
   font-size: 1em;
   font-style: italic;
   margin: 10px;
@@ -200,6 +204,7 @@ main {
 
 /* optained from css-tricks.com */
 blockquote {
+  flex: 3 0 100px;
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
@@ -264,8 +269,9 @@ blockquote p {
 
 .smallcards ul li {
   display: block;
-  flex-shrink: 1;
+  flex-shrink: 3;
   flex-grow: 0;
+  flex-basis: 100px;
   margin: 2%;
   border-top: 5px solid #232c33;
   border-bottom-color: var(--dark);
@@ -363,6 +369,7 @@ blockquote p {
 .firstProject-contents {
   border-right: 0px solid #5a7d7c;
   border-left: 0px solid #5a7d7c;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 426px) {
@@ -417,9 +424,12 @@ blockquote p {
   }
 }
 
-/* @media screen and (max-width: 321px) {
-  .smallcards ul li {
-    display: block;
+@media screen and (max-width: 321px) {
+  .about-container {
+    font-size: 12px;
+    margin: 0;
+    font-size: x-small;
+    padding: 0;
   }
-} */
+}
 /* testing area */
