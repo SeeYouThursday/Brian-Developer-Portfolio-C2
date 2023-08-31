@@ -126,14 +126,7 @@ main {
   min-width: none;
 }
 
-article img {
-  margin-left: 10%;
-  flex-shrink: 1;
-  /* min-width: none;
- min-height: none; */
-}
-
-article p {
+.about-container p {
   flex-grow: 1;
   flex-shrink: 1;
   margin-left: 50px;
@@ -148,11 +141,17 @@ article p {
 .selfie-wrapper {
   display: flex;
   justify-self: center;
+  align-items: center;
   margin-right: 5%;
+  border: yellow;
+  background-color: yellow;
 }
 
 .selfie-wrapper img {
   flex: 2 0 200px;
+  height: 200px;
+  object-fit: scale-down;
+  border-radius: 3%;
 }
 
 #dev-portfolio-label {
@@ -167,7 +166,7 @@ article p {
 .firstProject-contents {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   padding: 0px;
@@ -190,6 +189,13 @@ article p {
   flex-basis: 20%;
   padding: 0px;
   max-width: 100%;
+}
+
+#first-descrip {
+  flex: 2 0 200px;
+  font-size: 1em;
+  font-style: italic;
+  margin: 10px;
 }
 
 /* optained from css-tricks.com */
@@ -237,10 +243,7 @@ blockquote p {
   font-size: 16px;
   text-align: center;
 }
-
-.smallcards {
-  padding: 0px;
-}
+/*  */
 
 .smallcards ul {
   list-style-type: none;
@@ -331,7 +334,7 @@ blockquote p {
 }
 
 @media screen and (max-width: 1025px) {
-  article p {
+  #dev-hook {
     margin: 10px;
   }
 
