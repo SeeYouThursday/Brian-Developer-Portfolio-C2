@@ -6,6 +6,10 @@ html {
   color-scheme: dark light;
 }
 
+a {
+  text-decoration: overline underline wavy;
+}
+
 a:link {
   color: yellow;
 }
@@ -29,9 +33,9 @@ main {
   display: flex;
   flex-direction: column;
   margin: 10px;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  align-content: center;
+  align-content: stretch;
 }
 
 .firstStep {
@@ -45,20 +49,39 @@ main {
 }
 
 /* .firstStep h3 */
-/* 
+
 article {
   display: flex;
-  /* flex-direction: column;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
- } */
+}
+
+.takemetobuttontown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-color: aqua;
+  /* margin-left: 10%; */
+  box-shadow: 5px 5px 5px;
+  background-color: aqua;
+  font-size: 1em;
+}
 
 button {
-  border-color: aqua;
+  flex: 2 2 200px;
   border-radius: 100%;
-  padding: 100px;
-  margin-left: 10%;
-  box-shadow: 5px 5px 5px;
+  padding: 20px;
+  max-width: 120px;
+  border: 5px solid gold;
+  background-color: darkkhaki;
+  color: rgb(from color 189 183 107);
   cursor: pointer;
-  font-size: 100px;
+  margin: 20px;
+}
+
+button:hover {
+  display: block;
+  transform: rotate(360deg);
+  transition-duration: 2s;
 }
