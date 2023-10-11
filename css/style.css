@@ -12,7 +12,7 @@
 
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: var(--light);
+  background-color: var(--heading-color);
   margin: 0;
 }
 
@@ -38,7 +38,7 @@ header {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 10px 10px var(--light);
+  /* box-shadow: 5px 10px 10px var(--light); */
   background-color: var(--heading-color);
   align-content: baseline;
   margin: 0px;
@@ -53,6 +53,19 @@ h1 {
   padding: 10px;
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-space-btwn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 /* adjust width here to affect the background of the navbar */
 .nav {
   /* two below make the nav contents into a row */
@@ -89,9 +102,9 @@ nav ul li a {
 
 /* Interact with Nav */
 
-.nav li:active {
+/* .nav li:active {
   box-shadow: inset 5px 5px 15px gold;
-}
+} */
 
 main {
   margin: 0px;
@@ -108,7 +121,7 @@ main {
   color: var(--yellow);
   padding: 10px 10px 10px 45px;
   background-color: var(--heading-color);
-  box-shadow: 5px 10px 10px var(--light);
+  /* box-shadow: 5px 10px 10px var(--light); */
 }
 
 /* About Me Content Styling */
@@ -163,70 +176,19 @@ main {
   line-height: normal;
 } */
 
-.firstProject-contents {
+/* .firstProject-contents {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  position: relative;
-  margin-bottom: 0px;
-}
+  /* padding: 10px; */
+/* position: relative; */
+/* margin-bottom: 0px;} */
 
-.firstProject-contents a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.firstProject-contents a img {
-  border: 5px solid var(--dark);
-  flex-grow: 1;
-  flex-basis: 300px;
-  padding: 0px;
-  max-width: 100%;
-}
-
-.firstProject-contents h4 {
-  border: #232c33 solid;
-  border-bottom: #232c33 dashed;
-  background-color: whitesmoke;
-  padding: 10px;
-}
-
-#first-descrip {
-  flex: 2 1 200px;
-  font-size: 1em;
-  font-style: italic;
-  margin: 10px;
-}
-
-/* optained from css-tricks.com */
-blockquote {
-  flex: 3 0 100px;
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-}
-
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-blockquote p {
-  display: inline;
-}
-
-.firstProject-contents a img:hover {
-  filter: invert(10%);
+.card {
+  margin-right: 50%;
+  margin-left: 50%;
 }
 /* Small Project Cards "Notable Mentions"*/
 
@@ -365,69 +327,3 @@ blockquote p {
   border-left: 0px solid #5a7d7c;
   flex-wrap: wrap;
 }
-
-@media screen and (max-width: 426px) {
-  h1 {
-    padding-left: 30px;
-  }
-
-  .nav {
-    flex-wrap: wrap;
-  }
-
-  article img {
-    max-width: 35vh;
-  }
-
-  .about-container {
-    flex-direction: column;
-    font-size: 14px;
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 376px) {
-  .nav {
-    position: relative;
-    right: 10px;
-  }
-
-  article p {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .smallcards ul li {
-    display: block;
-    flex-shrink: 5;
-    flex-grow: 0;
-    padding: 0;
-    margin-right: 50%;
-    margin-left: 50%;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 0px;
-  }
-
-  .contact-content {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    right: 8%;
-  }
-}
-
-@media screen and (max-width: 321px) {
-  .about-container {
-    font-size: 12px;
-    margin: 0;
-    font-size: x-small;
-    padding: 0;
-  }
-
-  .firstProject-contents {
-    padding: 0px;
-  }
-}
-/* testing area */
